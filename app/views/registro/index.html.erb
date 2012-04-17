@@ -1,0 +1,24 @@
+<%= form_for :user do |f| %>
+  <%= error_messages_for "user" %>
+
+<fieldset id="formulario">
+  <legend>Registro </legend>
+  <ul>
+    <li>
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+    </li>
+    <li>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </li>
+    <li>
+      <%= f.label :password %>
+      <%= f.text_field :password %>
+    </li>
+    <li>
+      <%= f.submit "Guardar" %>
+    </li>
+  </ul>
+</fieldset>
+<%end%>

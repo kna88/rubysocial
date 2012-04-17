@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%=  @titulo %></title>
+  <%= stylesheet_link_tag "reset" %>
+  <%= stylesheet_link_tag "estilos" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="contenido">
+    <div id="cabecera">
+      <h1><%= @titulo %></h1>
+    </div>
+    <div id="menu">
+      <%= link_to_unless_current "Inicio", home_url %>
+      <%= link_to_unless_current "Quiénes Somos",quienes_url %>
+      <%= link_to_unless_current "Ayuda",ayuda_url %>
+      <%= link_to_unless_current "Registro",loguin_url %>
+    </div>
+    <div id="contenido_main">
+      <%= yield %>
+    </div>
+  </div>
+  <%=%>
+
+
+</body>
+</html>
